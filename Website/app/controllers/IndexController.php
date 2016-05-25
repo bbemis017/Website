@@ -7,7 +7,11 @@ class IndexController extends Controller
 
     public function indexAction()
     {
-	echo "this test";
+	$this->view->pick("index.phtml");
+
+	$this->view->test = 'yes';
+	
+
     }
 }
 ?>
