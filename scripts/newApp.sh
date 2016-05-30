@@ -1,5 +1,12 @@
 APP_NAME=$1
+GITHUB=$2
 MAX_APPS=20
+
+#check argument list
+if [ $# -eq 2 ]
+then
+	echo 'invalid argument list'
+fi
 
 #Get number of active apps
 APPS=`find /var/www -maxdepth 1 | wc -l`
@@ -11,8 +18,21 @@ then
 	echo 'Too many ports in use, check aws security group'
 fi
 
+#clone github directory
+cd ../..
+git clone $GITHUB
+
+#setup
+cd $APP_NAME/scripts
+sh update.sh
+cd ../../Website/scripts
+
 PORT=`expr 80 + $APPS - 1`
 echo "port is: $PORT"
+
+#update app list
+APP_LIST=../config/apps.txt
+echo "$APP_NAME" >> $APP_LIST
 
 #add info to 000-default.conf.apache
 VIRTUAL_HOST=../config/000-default.conf.apache
