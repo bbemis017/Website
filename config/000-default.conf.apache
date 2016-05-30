@@ -10,3 +10,8 @@
 	DocumentRoot /var/www/livestock/livestock/public/
 	ServerName livestock
 </VirtualHost>
+<VirtualHost *:82>
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/livestock/livestock/public/
+	ServerName livestock
+</VirtualHost>
