@@ -6,4 +6,5 @@ The goal is to have live demo's of some of my projects available for employers t
 http://23.23.26.42
 
 ### What works
- - Mulitple applications can be run from the same server, but on different ports
+ - Mulitple applications can be run from the same server, on an alias
+ - Mysql database is running and can be connected to
