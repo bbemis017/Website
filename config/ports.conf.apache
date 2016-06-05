@@ -12,5 +12,3 @@
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 Listen 80
-Listen 81
-Listen 82
