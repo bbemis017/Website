@@ -10,10 +10,3 @@
 		DirectoryIndex index.php
 		AllowOverride All
 	</Directory>
-Alias /livestock /var/www/livestock/livestock/public
-<Directory /var/www/livestock/livestock/public>
-	Options FollowSymLinks
-	DirectoryIndex index.php
- 	AllowOverride all
-</Directory>
-</VirtualHost>
