@@ -6,3 +6,4 @@ mysql_secure_installation
 #install phpmyadmin
 apt-get install phpmyadmin
 php5enmod mcrypt
+service apache2 restart
