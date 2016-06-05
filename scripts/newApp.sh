@@ -49,4 +49,10 @@ echo "</VirtualHost>" >> $VIRTUAL_HOST
 cp ../config/apache2.conf.apache /etc/apache2/apache2.conf
 cp $VIRTUAL_HOST /etc/apache2/sites-available/000-default.conf
 
+#update repository on origin master
+git add $APP_LIST
+git commit -m "Configured $APP_NAME on server"
+git push origin master
+echo "commited changes to origin master"
+
 service apache2 restart
