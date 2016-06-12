@@ -6,4 +6,5 @@ sudo ./install
 echo "extension=/usr/lib/php5/20121212/phalcon.so" > /etc/php5/mods-available/phalcon.ini
 ln -s /etc/php5/mods-available/phalcon.ini /etc/php5/apache2/conf.d/20-phalcon.ini
 ln -s /etc/php5/mods-available/phalcon.ini /etc/php5/cli/conf.d/20-phalcon.ini
+a2enmod rewrite
 service apache2 restart
