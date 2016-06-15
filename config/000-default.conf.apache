@@ -10,10 +10,11 @@
 		DirectoryIndex index.php
 		AllowOverride All
 	</Directory>
-Alias /livestock /var/www/livestock/livestock/public
-<Directory /var/www/livestock/livestock/public>
-	Options FollowSymLinks
-	DirectoryIndex index.php
- 	AllowOverride all
-</Directory>
+     Alias /livestock/ "/var/www/livestock/"
+     <Directory "/var/www/livestock/">
+     Options Indexes FollowSymLinks Includes ExecCGI MultiViews
+     AllowOverride all
+     Require all granted
+     </Directory>
+ 
 </VirtualHost>

@@ -33,13 +33,13 @@ cp $PREPEND $VIRTUAL_HOST
 while read -r line
 do
 	#do this for every app
-	DIR=/var/www/$APP_NAME/$APP_NAME/public
-	echo "Alias /$APP_NAME $DIR" >> $VIRTUAL_HOST
-	echo "<Directory $DIR>" >> $VIRTUAL_HOST
-	echo "	Options FollowSymLinks" >> $VIRTUAL_HOST
-	echo "	DirectoryIndex index.php" >> $VIRTUAL_HOST
-	echo " 	AllowOverride all" >> $VIRTUAL_HOST
-	echo "</Directory>" >> $VIRTUAL_HOST
+	APACHE=/var/www/$APP_NAME/config/apache.conf
+	while read -r line2
+	do
+		echo "    " $line2 >> $VIRTUAL_HOST
+	done < $APACHE
+	
+	echo " " >> $VIRTUAL_HOST
 
 done < "$APP_LIST"
 
