@@ -1,9 +1,9 @@
 #install mysql
-apt-get install mysql-server php5-mysql
+apt-get install mysql-server
 mysql_install_db
 mysql_secure_installation
 
 #install phpmyadmin
 apt-get install phpmyadmin
-php5enmod mcrypt
+php7.0enmod mcrypt
 service apache2 restart

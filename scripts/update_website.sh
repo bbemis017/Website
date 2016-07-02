@@ -1,5 +1,5 @@
 #update website code
-git pull origin master
+#git pull origin master
 
 #update configuration files
 cp ../config/000-default.conf.apache /etc/apache2/sites-available/000-default.conf
