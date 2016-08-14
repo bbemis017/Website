@@ -1,0 +1,9 @@
+
+	Alias "/" "/var/www/Website/Website/public/web/"
+	<Directory "/var/www/Website/Website/public/web/">
+		Options Indexes FollowSymLinks Includes ExecCGI MultiViews
+		DirectoryIndex index.html
+		AllowOverride all
+		Require all granted
+	</Directory>
+</VirtualHost>
