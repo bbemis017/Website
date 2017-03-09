@@ -9,4 +9,6 @@
 		Options FollowSymLinks
 		DirectoryIndex index.php
 		AllowOverride All
+		Deny from all
+		Allow from 127.0.0.1
 	</Directory>
