@@ -10,7 +10,6 @@
 		DirectoryIndex index.php
 		AllowOverride All
 		Deny from all
-		Allow from 127.0.0.1
 	</Directory>
      Alias "/livestocktracker" "/var/www/LivestockTracker/src/"
      <Directory "/var/www/LivestockTracker/src/">
