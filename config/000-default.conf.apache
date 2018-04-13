@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:8081>
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/Website/Website/public/web/
 	ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -16,13 +16,4 @@
      AllowOverride all
      Require all granted
      </Directory>
- 
-
-	Alias "/" "/var/www/Website/Website/public/web/"
-	<Directory "/var/www/Website/Website/public/web/">
-		Options Indexes FollowSymLinks Includes ExecCGI MultiViews
-		DirectoryIndex index.html
-		AllowOverride all
-		Require all granted
-	</Directory>
 </VirtualHost>
